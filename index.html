@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flappy Bird AI Trained version</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="sky"></div>
+    <img src="cloud.png" alt=""class="cloud cloud1">
+    <div ></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <h1 class="game-title">Flappy Bird <span>Cloud</span></h1>
+    <p class="tagline">Train the bird to fly smarter, survive longer, and break limits 🚀</p>
+
+    <div class="btn-group">
+      <button id="startBtn" class="btn">Start Game</button>
+      <button id="resetBtn" class="btn">Reset</button>
+    </div>
+
+    <!-- Animated Birds -->
+     <img src="flappy.jpg" alt="" srcset="" class="bird bird1">
+    <div class="bird bird2"></div>
+    <div class="bird bird3"></div>
+  </div>
+
+  <!-- Game Section -->
+  <div class="game-container">
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div class="ui-panel">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

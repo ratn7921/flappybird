@@ -1,0 +1,182 @@
+/* ==========================================================
+   Flappy Bird AI Trainer - Enhanced Landing Page Styles
+   ========================================================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+  overflow-x: hidden;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(to top, #b2fefa, #0ed2f7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.game-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  animation: floatTitle 3s ease-in-out infinite;
+}
+
+.game-title span {
+  color: #ffd600;
+  text-shadow: 3px 3px #ff5722;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.4rem;
+  margin: 20px 0 40px;
+  color: #fff;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Sky & Clouds */
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #4facfe, #00f2fe);
+  z-index: -2;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.cloud1 {
+  width: 200px;
+  height: 100px;
+  top: 20%;
+  left: -200px;
+  animation: cloudMove 50s linear infinite;
+}
+
+.cloud2 {
+  width: 150px;
+  height: 80px;
+  top: 40%;
+  left: -150px;
+  animation: cloudMove 60s linear infinite;
+}
+
+.cloud3 {
+  width: 250px;
+  height: 120px;
+  top: 60%;
+  left: -250px;
+  animation: cloudMove 70s linear infinite;
+}
+
+/* Birds flying */
+.bird {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url('https://i.ibb.co/TrR6jmN/flappy.png') center/contain no-repeat;
+  animation: flyBird 8s linear infinite;
+}
+
+.bird1 { top: 20%; left: -100px; animation-delay: 0s; }
+.bird2 { top: 40%; left: -150px; animation-delay: 2s; }
+.bird3 { top: 60%; left: -200px; animation-delay: 4s; }
+
+/* ================= GAME SECTION ================= */
+.game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  margin: 80px auto;
+  border: 6px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.ui-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes floatTitle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+@keyframes flyBird {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(120vw) rotate(10deg); }
+  100% { transform: translateX(0) rotate(-5deg); }
+}
