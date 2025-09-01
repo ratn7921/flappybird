@@ -1,43 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flappy Bird Enhanced</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flappy — Complete</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div class="game-container">
-    
-    <!-- Landing Screen -->
-    <div id="landingScreen" class="overlay">
-      <h1 class="game-title">Flappy Bird AI Trainer</h1>
-      <p class="subtitle">Sharpen your reflexes, train smarter 🐦</p>
-      <button id="playBtn" class="fancy-btn">Start Training</button>
-    </div>
-
-    <!-- Game Canvas -->
-    <canvas id="gameCanvas" width="420" height="640"></canvas>
-
-    <!-- Game UI -->
-    <div id="gameUI" class="ui-panel hidden">
-      <p>Score: <span id="score">0</span></p>
-      <p>Best: <span id="bestScore">0</span></p>
-      <div class="btn-group">
-        <button id="resetBtn" class="fancy-btn">Reset</button>
-        <button id="pauseBtn" class="fancy-btn">Pause</button>
+  <div id="app">
+    <header class="hud">
+      <div class="hud-left">
+        <div class="label">Score</div>
+        <div id="score" class="value">0</div>
       </div>
-    </div>
+      <div class="hud-right">
+        <div class="label">Best</div>
+        <div id="bestScore" class="value">0</div>
+      </div>
+    </header>
 
-    <!-- Game Over Screen -->
-    <div id="gameOverScreen" class="overlay hidden">
-      <h2>Game Over</h2>
-      <p>Your Score: <span id="finalScore">0</span></p>
-      <p>Best Score: <span id="finalBest">0</span></p>
-      <button id="restartBtn" class="fancy-btn">Restart</button>
-    </div>
-    
+    <main class="game-wrap">
+      <canvas id="gameCanvas" width="480" height="640" aria-label="Flappy game canvas"></canvas>
+
+      <div id="landingScreen" class="overlay">
+        <h1>Flappy</h1>
+        <p>Press Space / Click to flap</p>
+        <button id="playBtn" class="btn">Play</button>
+      </div>
+
+      <div id="gameOverScreen" class="overlay hidden">
+        <h2>Game Over</h2>
+        <p>Score: <span id="finalScore">0</span></p>
+        <p>Best: <span id="finalBest">0</span></p>
+        <button id="restartBtn" class="btn">Restart</button>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <button id="pauseBtn" class="btn small">Pause</button>
+      <button id="resetBtn" class="btn small">Reset</button>
+    </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
