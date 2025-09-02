@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flappy Bird – Responsive Edition</title>
+  <title>Flappy Bird – Custom Edition</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +11,20 @@
   <!-- Main Menu -->
   <div class="menu" id="menu">
     <h1>Flappy Bird</h1>
+
+    <h3>Choose Bird</h3>
+    <div class="bird-select">
+      <img src="images/bird1.png" data-bird="0" class="bird-option selected">
+      <img src="images/bird2.png" data-bird="1" class="bird-option">
+      <img src="images/bird3.png" data-bird="2" class="bird-option">
+    </div>
+
+    <h3>Choose Background</h3>
+    <div class="bg-select">
+      <button data-bg="day">Day</button>
+      <button data-bg="night">Night</button>
+    </div>
+
     <button id="showInstructions">How to Play</button>
     <button id="startBtn">Start Game</button>
   </div>
@@ -20,11 +34,11 @@
     <h2>How to Play</h2>
     <p>Press <strong>Space</strong>, <strong>Arrow Up</strong> or <strong>W</strong> to flap.</p>
     <p>Click or tap the screen to flap on mobile devices.</p>
-    <p>Dodge the pipes and get the highest score!</p>
+    <p>Dodge the pipes and aim for the highest score!</p>
     <button id="closeInstructions">Play Game</button>
   </div>
 
-  <!-- Canvas -->
+  <!-- Game Canvas -->
   <canvas id="gameCanvas"></canvas>
 
   <!-- Score Card -->

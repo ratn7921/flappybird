@@ -20,14 +20,14 @@ body {
 /* Main Menu */
 .menu {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   width: 90%;
-  max-width: 400px;
+  max-width: 480px;
 }
 .menu h1 {
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 button {
   padding: 12px 20px;
@@ -43,6 +43,18 @@ button {
 }
 button:hover {
   background: #ffaa00;
+}
+
+/* Bird selection */
+.bird-select img {
+  width: 50px;
+  margin: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.bird-select img.selected {
+  border: 2px solid #ffbf00;
 }
 
 /* Canvas */
@@ -119,5 +131,31 @@ canvas {
   }
   .countdown {
     font-size: 48px;
+  }
+}
+@media(max-width: 400px){
+  .menu h1 {
+    font-size: 24px;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+@media(max-width: 320px){
+  .menu h1 {
+    font-size: 20px;
+  }
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+@media(max-height: 500px){
+  body {
+    justify-content: center;
+  }
+  .menu {
+    margin-top: 10px;
   }
 }
