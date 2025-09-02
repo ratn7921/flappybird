@@ -9,7 +9,7 @@ This project is built with **HTML, CSS, and JavaScript** and features a smooth g
 ## 🎮 Demo
 
 Experience the game right in your browser!
-![Flappy Bird Demo](demo-image-or-gif.gif) *(replace with your GIF or image)*
+![Flappy Bird Demo](gameplay.gif) *(replace with your GIF or image)*
 
 ---
 

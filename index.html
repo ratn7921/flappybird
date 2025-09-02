@@ -3,22 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flappy Bird AAA</title>
+  <title>Flappy Bird – Ultimate Edition</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="menu">
-    <h1>Flappy Bird AAA</h1>
+
+  <!-- Main Menu -->
+  <div class="menu" id="menu">
+    <h1>Flappy Bird</h1>
+    <button id="showInstructions">How to Play</button>
     <button id="startBtn">Start Game</button>
   </div>
 
+  <!-- Instructions Overlay -->
+  <div class="instructions hidden" id="instructions">
+    <h2>How to Play</h2>
+    <p>Press <strong>Space</strong>, <strong>Arrow Up</strong> or <strong>W</strong> to flap.</p>
+    <p>Click or tap the screen to flap on mobile devices.</p>
+    <p>Dodge the pipes and get the highest score!</p>
+    <button id="closeInstructions">Play Game</button>
+  </div>
+
+  <!-- Canvas -->
   <canvas id="gameCanvas" width="400" height="600"></canvas>
 
+  <!-- Score Card -->
   <div class="score-card hidden" id="scoreCard">
     <h2>Game Over!</h2>
     <p id="finalScore"></p>
     <button id="restartBtn">Restart</button>
   </div>
+
+  <!-- Pause Button -->
+  <button id="pauseBtn" class="hidden">Pause</button>
 
   <script src="script.js"></script>
 </body>
