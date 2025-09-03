@@ -815,7 +815,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ground = new Image(); ground.src = "images/ground.png";
 
   // Physics
-  const gravity = 0.4, lift = -6.5, maxFall = 3;
+  const gravity = 0.8, lift = -6.5, maxFall = 3;
 
   // Audio
   const flapSound = new Audio("audio/flap.mp3");
