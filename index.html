@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flappy Bird – Custom Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Menu -->
+  <div class="menu" id="menu">
+    <h1>🐦 Flappy Bird</h1>
+
+    <div class="section">
+      <h3>Choose Bird</h3>
+      <div class="bird-select">
+        <img src="images/bird1.png" data-bird="0" class="bird-option selected" alt="bird1">
+        <img src="images/bird2.png" data-bird="1" class="bird-option" alt="bird2">
+        <img src="images/bird3.png" data-bird="2" class="bird-option" alt="bird3">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Choose Background</h3>
+      <div class="bg-select">
+        <button data-bg="day">🌞 Day</button>
+        <button data-bg="night">🌙 Night</button>
+      </div>
+    </div>
+
+    <div class="menu-actions">
+      <button id="showInstructions">📖 How to Play</button>
+      <button id="startBtn">▶️ Start Game</button>
+    </div>
+
+    <div class="footer-note">
+      <small>High Score: <span id="menuHighScore">0</span></small>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="overlay hidden" id="instructions">
+    <div class="overlay-content">
+      <h2>How to Play</h2>
+      <p><strong>Desktop:</strong> Press <kbd>Space</kbd>, <kbd>Arrow ↑</kbd> or <kbd>W</kbd></p>
+      <p><strong>Mobile:</strong> Tap the screen</p>
+      <p>Tap to flap. Dodge pipes and aim for the highest score!</p>
+      <button id="closeInstructions">Got it! 🚀</button>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div class="game-container">
+    <canvas id="gameCanvas" class="hidden"></canvas>
+    <button id="pauseBtn" class="hidden">⏸ Pause</button>
+  </div>
+
+  <!-- Score Card -->
+  <div class="overlay hidden" id="scoreCard">
+    <div class="overlay-content" id="scoreContent">
+      <h2>Game Over!</h2>
+      <p id="finalScore">Your Score: 0 | High Score: 0</p>
+      <div class="score-actions">
+        <button id="restartBtn">🔄 Play Again</button>
+        <button id="returnHomeBtn">🏠 Return Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
