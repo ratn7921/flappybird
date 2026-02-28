@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Flappy Bird – Custom Edition</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- SEO & Metadata -->
+    <title>Flappy Bird Pro – Premium Edition</title>
+    <meta name="description"
+        content="A high-performance, production-quality Flappy Bird clone built with modular ES6+ JavaScript." />
+    <meta name="theme-color" content="#0F172A" />
+
+    <!-- AI Libraries -->
+    <script src="src/ai/tf.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Preload Assets -->
+    <link rel="preload" href="images/bird1.png" as="image" />
+    <link rel="preload" href="images/daybg.png" as="image" />
 </head>
+
 <body>
-  <!-- Main Menu -->
-  <div class="menu" id="menu">
-    <h1>🐦 Flappy Bird</h1>
+    <!-- Main Menu -->
+    <div id="menu" class="menu">
+        <h1>BIRD PRO</h1>
 
-    <div class="section">
-      <h3>Choose Bird</h3>
-      <div class="bird-select">
-        <img src="images/bird1.png" data-bird="0" class="bird-option selected" alt="bird1">
-        <img src="images/bird2.png" data-bird="1" class="bird-option" alt="bird2">
-        <img src="images/bird3.png" data-bird="2" class="bird-option" alt="bird3">
-      </div>
+        <div class="section">
+            <h3>Select your Bird</h3>
+            <div class="bird-select">
+                <img src="images/bird1.png" data-bird="0" class="bird-option selected" alt="Classic Bird">
+                <img src="images/bird2.png" data-bird="1" class="bird-option" alt="Blue Bird">
+                <img src="images/bird3.png" data-bird="2" class="bird-option" alt="Red Bird">
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Environment</h3>
+            <div class="bg-select">
+                <button data-bg="day">🌞 DAY</button>
+                <button data-bg="night">🌙 NIGHT</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Mission Mode</h3>
+            <select id="modeSelect" class="mode-select">
+                <option value="HUMAN">👤 HUMAN PILOT</option>
+                <option value="AI_PLAY">🤖 AI INFERENCE</option>
+                <option value="AI_TRAIN">🧠 NEURAL TRAINING</option>
+            </select>
+        </div>
+
+        <div class="menu-actions">
+            <button id="showInstructions">HOW TO PLAY</button>
+            <button id="startBtn">START MISSION</button>
+        </div>
+
+        <div class="footer-note">
+            HIGH SCORE: <span id="menuHighScore">0</span>
+        </div>
     </div>
 
-    <div class="section">
-      <h3>Choose Background</h3>
-      <div class="bg-select">
-        <button data-bg="day">🌞 Day</button>
-        <button data-bg="night">🌙 Night</button>
-      </div>
+    <!-- Instructions Overlay -->
+    <div id="instructions" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>CONTROLS</h2>
+            <div class="controls-list">
+                <p><strong>Desktop:</strong> Press <kbd>Space</kbd>, <kbd>↑</kbd> or <kbd>W</kbd></p>
+                <p><strong>Mobile:</strong> Tap the screen to flap</p>
+            </div>
+            <p>Dodge the pipes and survive as long as possible!</p>
+            <button id="closeInstructions">LIFTOFF! 🚀</button>
+        </div>
     </div>
 
-    <div class="menu-actions">
-      <button id="showInstructions">📖 How to Play</button>
-      <button id="startBtn">▶️ Start Game</button>
+    <!-- Game Context -->
+    <div class="game-container">
+        <canvas id="gameCanvas" class="hidden"></canvas>
+        <button id="pauseBtn" class="hidden">⏸ PAUSE</button>
     </div>
 
-    <div class="footer-note">
-      <small>High Score: <span id="menuHighScore">0</span></small>
+    <!-- Game Over Score Card -->
+    <div id="scoreCard" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>MISSION FAILED</h2>
+            <p id="finalScore">Your Score: 0 | High Score: 0</p>
+            <div class="score-actions">
+                <button id="restartBtn">RETRY</button>
+                <button id="returnHomeBtn">HOME</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Instructions -->
-  <div class="overlay hidden" id="instructions">
-    <div class="overlay-content">
-      <h2>How to Play</h2>
-      <p><strong>Desktop:</strong> Press <kbd>Space</kbd>, <kbd>Arrow ↑</kbd> or <kbd>W</kbd></p>
-      <p><strong>Mobile:</strong> Tap the screen</p>
-      <p>Tap to flap. Dodge pipes and aim for the highest score!</p>
-      <button id="closeInstructions">Got it! 🚀</button>
-    </div>
-  </div>
-
-  <!-- Game -->
-  <div class="game-container">
-    <canvas id="gameCanvas" class="hidden"></canvas>
-    <button id="pauseBtn" class="hidden">⏸ Pause</button>
-  </div>
-
-  <!-- Score Card -->
-  <div class="overlay hidden" id="scoreCard">
-    <div class="overlay-content" id="scoreContent">
-      <h2>Game Over!</h2>
-      <p id="finalScore">Your Score: 0 | High Score: 0</p>
-      <div class="score-actions">
-        <button id="restartBtn">🔄 Play Again</button>
-        <button id="returnHomeBtn">🏠 Return Home</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <!-- Main Module Entry -->
+    <script type="module" src="src/main.js"></script>
 </body>
+
 </html>

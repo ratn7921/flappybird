@@ -26,36 +26,27 @@ Experience the game right in your browser!
 ## 🚀 Getting Started
 
 1. **Clone the repository**
-
 ```bash
-git clone https://github.com/yourusername/flappybird.git
+git clone https://github.com/ratn7921/flappybird.git
 ```
 
-2. **Open `index.html` in your browser**
-   No installation required – it works right in your browser!
+2. **Serve the project**
+Since this version uses ES Modules, you must run it through a local server:
+- Use VS Code **Live Server**
+- Or run `npx serve .`
+- Or run `python -m http.server`
 
 3. **Start Playing!**
-   Click the **Start** button and tap the spacebar to keep your bird flying. 🐦
-
----
-
-## 💡 How to Contribute
-
-Contributions are welcome! Whether you want to add new features, improve graphics, or optimize the code, your input is valuable.
-
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
+Click the **Start Mission** button. Use `Space`, `Up Arrow`, or `Tap` to fly. 🐦
 
 ---
 
 ## 🛠️ Built With
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
+* **Vanilla JavaScript (ES6+)** - Modular architecture
+* **HTML5 Canvas** - High-performance rendering
+* **CSS3** - Premium glassmorphism UI
+* **Custom Event Bus** - Decoupled logic flow
 
 ---
 
